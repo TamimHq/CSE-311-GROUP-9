@@ -1,0 +1,218 @@
+/* CSS RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+/* CSS RESET */
+
+
+/* HEADER START */
+
+header {
+    background-color: black;
+    position: sticky;
+    top: 0;
+}
+
+.navbar {
+    display: flex;
+}
+
+.logo {
+    padding: 16px;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.logo h1 {
+    color: greenyellow;
+    font-size: 40px;
+}
+
+.list {
+    margin: 18px;
+}
+
+.list ul {
+    display: flex;
+}
+
+.list ul li {
+    display: inline-block;
+    margin: 15px;
+}
+
+.list ul li a {
+    color: aliceblue;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.list ul li a:hover {
+    color: black;
+    background: white;
+    border: 3px solid white;
+    border-radius: 5px;
+}
+
+/* HEADER END  */
+
+
+
+/* MAIN START  */
+
+/* SECTION 01 START HOME */
+
+.section1 {
+    background-color: blue;
+    height: 528px;
+    background-image: url(1.jpg);
+    background-size: inherit;
+    margin: 0px;
+}
+
+.welcome {
+    display: inline-block;
+    margin: 142px;
+}
+
+.welcome h1 {
+    text-align: center;
+    font-size: xx-large;
+    color: #33ffbe;
+}
+
+.welcome a {
+    margin: 132px;
+    line-height: 60px;
+}
+
+.welcome input {
+    background-color: aquamarine;
+    border: 2px solid aquamarine;
+    border-radius: 30px;
+    height: 36px;
+    width: 112px;
+}
+
+.welcome input:hover {
+    background-color: white;
+    border: 2px solid white;
+    
+}
+
+.log1 {
+    background-color: rgb(51, 180, 255);
+    height: 354px;
+    width: 378px;
+    margin: 63px 110px;
+    float: right;
+    border-radius: 34px;
+}
+
+.acc{
+    font-size: 18px;
+}
+
+.log2 {
+    margin: 17px 0px 0px 72px;
+    width: 241px;
+}
+
+.log2 h1 {
+    color: rgb(21, 138, 241);
+    background-color: rgb(224, 233, 233);
+    display: flex;
+    justify-content: center;
+    height: 34px;
+    border-radius: 19px;
+}
+
+.username {
+    margin: 0px 85px;
+}
+
+.username input {
+    width: 223px;
+    height: 23px;
+    border-radius: 9px;
+    border: 0px solid white;
+}
+
+.username p {
+    height: 24px;
+    margin-top: 16px;
+}
+
+.password {
+    margin: 0px 85px;
+}
+
+.password input {
+    width: 223px;
+    height: 23px;
+    border-radius: 9px;
+    border: 0px solid white;
+}
+
+.password p {
+    height: 24px;
+    margin-top: 16px;
+}
+
+.forget p {
+    margin: 14px;
+    display: flex;
+    justify-content: center;
+}
+
+.forget button {
+    width: 95px;
+    height: 27px;
+    border-radius: 15px;
+    border: 2px;
+    margin: 3px 0px 0px 140px;
+}
+
+.log1 a{
+    color: rebeccapurple;
+}
+
+/* SECTION 01 END HOME */
+
+
+
+.section2{
+    background-color: #33ffbe;
+    height: 550px;
+}
+
+
+/* ADMIN PANEL */
+
+.section1a{
+    display: flex;
+    justify-content: center;
+    background-color: blue;
+    height: 528px;
+    background-image: url(Photo/1.jpg);
+    background-size: inherit;
+    margin-top: 50px;
+}
+
+.log1a{
+    background-color: rgb(51, 180, 255);
+    height: 354px;
+    width: 378px;
+    margin: 63px 110px;
+    float: right;
+    border-radius: 34px;
+
+}
