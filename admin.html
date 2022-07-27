@@ -6,35 +6,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="rs[].css">
-    <title>Admin-Log In</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Admin - Log In</title>
 </head>
 
 <body>
-    <section>
-        <div class="section1a">
-            <div class="log1a">
-                <div class="acc">
-                    <div class="log2">
-                        <h1>Admin Account</h1>
-                    </div>
-                    <div class="username">
-                        <p>Username</p>
-                        <input type="text" name="number" id="number" placeholder="Enter Mobile Number">
-                    </div>
-                    <div class="password">
-                        <p>Password</p>
-                        <input type="password" name="password" id="password" placeholder="Enter Password">
-                    </div>
-                    <div class="forget">
-                        <p>Forgot Password? Contact Seniors</p>
-                        <a href=""> <button>Log In</button> </a>
-                        <p>Have a Nice Day</p>
+    <section id="admin">
+        <div id="section1">
+            <div class="container">
+                <div class="forms">
+                    <!-- Log In Form -->
+                    <div class="form login">
+                        <span class="title">Login</span>
+
+                        <form action="#">
+                            <div class="input-field">
+                                <input type="text" placeholder="Enter your email" required>
+                                <i class="uil uil-envelope icon"></i>
+                            </div>
+                            <div class="input-field">
+                                <input type="password" class="password" placeholder="Enter your password" required>
+                                <i class="uil uil-lock icon"></i>
+                                <i class="uil uil-eye-slash showHidePw"></i>
+                            </div>
+
+                            <div class="checkbox-text">
+                                <div class="checkbox-content">
+                                    <input type="checkbox" id="logCheck">
+                                    <label for="logCheck" class="text">Remember me</label>
+                                </div>
+
+                                <a href="#" class="text">Forgot password?</a>
+                            </div>
+
+                            <div class="input-field button">
+                                <input type="button" value="Login">
+                            </div>
+                        </form>
+
+                        <div class="login-signup">
+                            <span class="text">Have a good day
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 </body>
 
 </html>
