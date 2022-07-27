@@ -1,218 +1,250 @@
-/* CSS RESET */
-
+/* CSS Reset */
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
 }
 
-html{
+body {
+    font-family: montserrat;
     scroll-behavior: smooth;
 }
-/* CSS RESET */
 
-
-/* HEADER START */
-
-header {
-    background-color: black;
+/* Navigation Bar start */
+nav {
+    background: black;
+    height: 80px;
+    width: 100%;
     position: sticky;
     top: 0;
 }
 
-.navbar {
-    display: flex;
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
 }
 
-.logo {
-    padding: 16px;
+nav ul {
+    float: right;
+    margin-right: 20px;
 }
 
-.logo a {
-    text-decoration: none;
-}
-
-.logo h1 {
-    color: greenyellow;
-    font-size: 40px;
-}
-
-.list {
-    margin: 18px;
-}
-
-.list ul {
-    display: flex;
-}
-
-.list ul li {
+nav ul li {
     display: inline-block;
-    margin: 15px;
+    line-height: 80px;
+    margin: 0 5px;
 }
 
-.list ul li a {
-    color: aliceblue;
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
     text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+    background: #1b9bff;
+    transition: 0.5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+/* Navigation Bar end  */
+
+/* Main Section Start */
+
+/* Home Section Start */
+
+#section1 {
+    background: url(1.jpg) no-repeat;
+    background-size: cover;
+    height: 600px;
+}
+
+.container {
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    float: right;
+    margin-right: 80px;
+    overflow: hidden;
+}
+
+.container .forms {
+    display: flex;
+    align-items: center;
+    height: 440px;
+    width: 200%;
+    transition: height 0.2s ease;
+}
+
+
+.container .form {
+    width: 50%;
+    padding: 30px;
+    background-color: #fff;
+    transition: margin-left 0.18s ease;
+}
+
+.container.active .login {
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+
+.container .signup {
+    opacity: 0;
+    transition: opacity 0.09s ease;
+}
+
+.container.active .signup {
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.container.active .forms {
+    height: 600px;
+}
+
+.container .form .title {
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.form .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: #4070f4;
+    border-radius: 25px;
+}
+
+.form .input-field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.input-field input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) {
+    border-bottom-color: #4070f4;
+}
+
+.input-field i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid)~i {
+    color: #4070f4;
+}
+
+.input-field i.icon {
+    left: 0;
+}
+
+.input-field i.showHidePw {
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.form .checkbox-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-content input {
+    margin: 0 8px -2px 4px;
+    accent-color: #4070f4;
+}
+
+.form .text {
+    color: #333;
+    font-size: 14px;
+}
+
+.form a.text {
+    color: #4070f4;
     text-decoration: none;
 }
 
-.list ul li a:hover {
-    color: black;
-    background: white;
-    border: 3px solid white;
-    border-radius: 5px;
+.form a:hover {
+    text-decoration: underline;
 }
 
-/* HEADER END  */
-
-
-
-/* MAIN START  */
-
-/* SECTION 01 START HOME */
-
-.section1 {
-    background-color: blue;
-    height: 528px;
-    background-image: url(1.jpg);
-    background-size: inherit;
-    margin: 0px;
+.form .button {
+    margin-top: 35px;
 }
 
-.welcome {
-    display: inline-block;
-    margin: 142px;
+.form .button input {
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: #4070f4;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.welcome h1 {
+.button input:hover {
+    background-color: #265df2;
+}
+
+.form .login-signup {
+    margin-top: 30px;
     text-align: center;
-    font-size: xx-large;
-    color: #33ffbe;
 }
 
-.welcome a {
-    margin: 132px;
-    line-height: 60px;
-}
-
-.welcome input {
-    background-color: aquamarine;
-    border: 2px solid aquamarine;
-    border-radius: 30px;
-    height: 36px;
-    width: 112px;
-}
-
-.welcome input:hover {
-    background-color: white;
-    border: 2px solid white;
-    
-}
-
-.log1 {
-    background-color: rgb(51, 180, 255);
-    height: 354px;
-    width: 378px;
-    margin: 63px 110px;
-    float: right;
-    border-radius: 34px;
-}
-
-.acc{
-    font-size: 18px;
-}
-
-.log2 {
-    margin: 17px 0px 0px 72px;
-    width: 241px;
-}
-
-.log2 h1 {
-    color: rgb(21, 138, 241);
-    background-color: rgb(224, 233, 233);
-    display: flex;
-    justify-content: center;
-    height: 34px;
-    border-radius: 19px;
-}
-
-.username {
-    margin: 0px 85px;
-}
-
-.username input {
-    width: 223px;
-    height: 23px;
-    border-radius: 9px;
-    border: 0px solid white;
-}
-
-.username p {
-    height: 24px;
-    margin-top: 16px;
-}
-
-.password {
-    margin: 0px 85px;
-}
-
-.password input {
-    width: 223px;
-    height: 23px;
-    border-radius: 9px;
-    border: 0px solid white;
-}
-
-.password p {
-    height: 24px;
-    margin-top: 16px;
-}
-
-.forget p {
-    margin: 14px;
-    display: flex;
-    justify-content: center;
-}
-
-.forget button {
-    width: 95px;
-    height: 27px;
-    border-radius: 15px;
-    border: 2px;
-    margin: 3px 0px 0px 140px;
-}
-
-.log1 a{
-    color: rebeccapurple;
-}
-
-/* SECTION 01 END HOME */
-
-
-
-.section2{
-    background-color: #33ffbe;
-    height: 550px;
-}
-
-
-/* ADMIN PANEL */
-
-.section1a{
-    display: flex;
-    justify-content: center;
-    background-color: blue;
-    height: 528px;
-    background-image: url(Photo/1.jpg);
-    background-size: inherit;
-    margin-top: 50px;
-}
-
-.log1a{
-    background-color: rgb(51, 180, 255);
-    height: 354px;
-    width: 378px;
-    margin: 63px 110px;
-    float: right;
-    border-radius: 34px;
-
-}
+/* Home Section End */
