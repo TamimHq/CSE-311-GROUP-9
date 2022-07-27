@@ -1,84 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
     <meta name="description"
         content="MegaPhone, widely abbreviated as MP, will be the leading telecommunications service provider in Bangladesh,">
     <meta name="keywords" content="MegaPhone, MobileOperator">
-    <title>MegaPhone - A Mobile Operator</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="rsp.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>MegaPhone - A mobile operator</title>
+
 </head>
 
 <body>
-
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="">
-                    <h1>MegaPhone</h1>
-                </a>
-            </div>
-            <div class="list">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">Founder</a></li>
-                    <li><a href="">FeedBack</a></li>
-                    <li><a href="admin.html" target="_blank">Admin</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <!-- Navigation Bar Start -->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">MegaPhone</label>
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="admin.html" target="_blank">Admin</a></li>
+        </ul>
+    </nav>
+    <!-- Navigation Bar End -->
 
     <main>
+        <!-- Home Section start -->
         <section id="home">
-            <div class="section1">
-                <div class="welcome">
-                    <h1>Welcome to MegaPhone <br>
-                        To know more about this operator <br>
-                        click the following button</h1>
-                    <a href="#about"><input type="button" value="See More &#8595"></a>
-                </div>
-                <div class="log1">
-                    <div class="acc">
-                        <div class="log2">
-                            <h1>Customer Account</h1>
+            <div id="section1">
+                <div class="container">
+                    <div class="forms">
+                        <!-- Log In Form -->
+                        <div class="form login">
+                            <span class="title">Login</span>
+
+                            <form action="#">
+                                <div class="input-field">
+                                    <input type="text" placeholder="Enter your email" required>
+                                    <i class="uil uil-envelope icon"></i>
+                                </div>
+                                <div class="input-field">
+                                    <input type="password" class="password" placeholder="Enter your password" required>
+                                    <i class="uil uil-lock icon"></i>
+                                    <i class="uil uil-eye-slash showHidePw"></i>
+                                </div>
+
+                                <div class="checkbox-text">
+                                    <div class="checkbox-content">
+                                        <input type="checkbox" id="logCheck">
+                                        <label for="logCheck" class="text">Remember me</label>
+                                    </div>
+
+                                    <a href="#" class="text">Forgot password?</a>
+                                </div>
+
+                                <div class="input-field button">
+                                    <input type="button" value="Login">
+                                </div>
+                            </form>
+
+                            <div class="login-signup">
+                                <span class="text">Not a member?
+                                    <a href="#" class="text signup-link">Signup Now</a>
+                                </span>
+                            </div>
                         </div>
-                        <div class="username">
-                            <p>Username</p>
-                            <input type="text" name="number" id="number" placeholder="Enter Mobile Number">
-                        </div>
-                        <div class="password">
-                            <p>Password</p>
-                            <input type="password" name="password" id="password" placeholder="Enter Password">
-                        </div>
-                        <div class="forget">
-                            <p> Forgot Password? <a href="#feedback">Contact Admin</a></p>
-                           <a href=""> <button>Log In</button></a>
-                            <p>Don't have account?<a href="">Sign Up</a></p>
+
+                        <!-- Registration Form -->
+                        <div class="form signup">
+                            <span class="title">Registration</span>
+
+                            <form action="#">
+                                <div class="input-field">
+                                    <input type="text" placeholder="Enter your name" required>
+                                    <i class="uil uil-user"></i>
+                                </div>
+                                <div class="input-field">
+                                    <input type="text" placeholder="Enter your email" required>
+                                    <i class="uil uil-envelope icon"></i>
+                                </div>
+                                <div class="input-field">
+                                    <input type="password" class="password" placeholder="Create a password" required>
+                                    <i class="uil uil-lock icon"></i>
+                                </div>
+                                <div class="input-field">
+                                    <input type="password" class="password" placeholder="Confirm a password" required>
+                                    <i class="uil uil-lock icon"></i>
+                                    <i class="uil uil-eye-slash showHidePw"></i>
+                                </div>
+
+                                <div class="checkbox-text">
+                                    <div class="checkbox-content">
+                                        <input type="checkbox" id="termCon">
+                                        <label for="termCon" class="text">I accepted all terms and conditions</label>
+                                    </div>
+                                </div>
+
+                                <div class="input-field button">
+                                    <input type="button" value="Signup">
+                                </div>
+                            </form>
+
+                            <div class="login-signup">
+                                <span class="text">Already a member?
+                                    <a href="#" class="text login-link">Login Now</a>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section id="about">
-            <div class="section2">
-                <div class="about1">
-                    <h1>What is MegaPhone?</h1>
-                    <p></p>
-                </div>
-            </div>
-        </section>
+        <!-- Home Section End -->
     </main>
+    <script src="index.js"></script>
+</body>
 
-
+</html>
 </body>
 
 </html>
