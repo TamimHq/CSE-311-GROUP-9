@@ -17,6 +17,25 @@
    }
    else
    {
-      echo "there is an problem".mysqli_error($db);
+      echo "there is an problem";
    }
+   $sql2="CREATE TABLE Admin(ID INT NOT NULL PRIMARY KEY, NAME VARCHAR(30) NOT NULL,EMAIL VARCHAR(30) NOT NULL, PASSWORD VARCHAR(30) NOT NULL)";
+   if(mysqli_query($db,$sql2))
+   {
+      echo "table created";
+   }
+   else
+   {
+      echo "there is an problem";
+  }
+   $sql3="INSERT INTO Admin(ID,NAME,EMAIL,PASSWORD) VALUES(1,'Akash','akash@xyz.com','1234'), (2,'Tamim','tamim@xyz.com','4567'),(3,'Sadman','sadman@xyz.com','6789')";
+     if(mysqli_query($db,$sql3))
+   {
+      echo "DATA ENTERED";
+   }
+   else
+   {
+      echo "there is an problem".mysqli_errot($db);
+   }
+
 ?>
