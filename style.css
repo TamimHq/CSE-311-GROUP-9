@@ -7,9 +7,17 @@
     box-sizing: border-box;
 }
 
+header {
+    position: sticky;
+    top: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: montserrat;
-    scroll-behavior: smooth;
 }
 
 /* Navigation Bar start */
@@ -17,8 +25,6 @@ nav {
     background: black;
     height: 80px;
     width: 100%;
-    position: sticky;
-    top: 0;
 }
 
 label.logo {
@@ -248,3 +254,77 @@ a:hover {
 }
 
 /* Home Section End */
+
+/* About Section Start */
+
+#about {
+    padding: 85px 0;
+}
+
+.abtext {
+    padding: 0 80px;
+}
+
+.about {
+    font-family: 'Poppins', sans-serif;
+}
+
+.about .about-content {
+    display: flex;
+    align-items: center;
+    line-height: 42px;
+}
+
+.about .about-content .left {
+    width: 45%;
+}
+
+.about .about-content .left img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 26px;
+}
+
+.about .about-content .right {
+    width: 55%;
+}
+
+.about .about-content .right .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about .about-content .right p {
+    text-align: justify;
+}
+
+.about .about-content .right a {
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.about .about-content .right a:hover {
+    color: crimson;
+    background: none;
+}
+
+.abtitle {
+    position: relative;
+    text-align: center;
+    font-size: 70px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+/* About Section Ends */
