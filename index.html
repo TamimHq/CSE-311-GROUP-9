@@ -15,7 +15,6 @@
     <title>MegaPhone - A mobile operator</title>
 
 </head>
-
 <body>
     <!-- Navigation Bar Start -->
     <header>
@@ -37,94 +36,98 @@
     <!-- Navigation Bar End -->
 
     <main>
-       <!-- Home Section start -->
-       <section id="home">
-        <div id="section1">
-              <div class="container">
-                  <div class="forms">
-                      <!-- Log In Form -->
-                      <div class="form login">
-                          <span class="title">Login</span>
+        <!-- Home Section start -->
+        <section id="home">
+            <div id="section1">
+                <div class="container">
+                    <div class="forms">
+                        <!-- Log In Form -->
+                        <div class="form login">
+                            <span class="title">Login</span>
 
-                          <form action="connect_script_2.php" method="POST">
-                              <div class="input-field">
-                                  <input type="text" id="email"name="email" placeholder="Enter your email" required>
-                                  <i class="uil uil-envelope icon"></i>
-                              </div>
-                              <div class="input-field">
-                                  <input type="password"id="password" name="password" class="password" placeholder="Enter your password" required>
-                                  <i class="uil uil-lock icon"></i>
-                                  <i class="uil uil-eye-slash showHidePw"></i>
-                              </div>
+                            <form action="connect_script_2.php" method="POST">
+                                <div class="input-field">
+                                    <input type="text" id="email" name="email" placeholder="Enter your email" required>
+                                    <i class="uil uil-envelope icon"></i>
+                                </div>
+                                <div class="input-field">
+                                    <input type="password" id="password" name="password" class="password"
+                                        placeholder="Enter your password" required>
+                                    <i class="uil uil-lock icon"></i>
+                                    <i class="uil uil-eye-slash showHidePw"></i>
+                                </div>
 
-                              <div class="checkbox-text">
-                                  <div class="checkbox-content">
-                                      <input type="checkbox" id="logCheck">
-                                      <label for="logCheck" class="text">Remember me</label>
-                                  </div>
+                                <div class="checkbox-text">
+                                    <div class="checkbox-content">
+                                        <input type="checkbox" id="logCheck">
+                                        <label for="logCheck" class="text">Remember me</label>
+                                    </div>
 
-                                  <a href="#" class="text">Forgot password?</a>
-                              </div>
+                                    <a href="#" class="text">Forgot password?</a>
+                                </div>
 
-                              <div class="input-field button">
-                                  <input type="submit" name="submit" value="Login">
-                              </div>
-                          </form>
+                                <div class="input-field button">
+                                    <input type="submit" name="submit" value="Login">
+                                </div>
+                            </form>
 
-                          <div class="login-signup">
-                              <span class="text">Not a member?
-                                  <a href="#" class="text signup-link">Signup Now</a>
-                              </span>
-                          </div>
-                      </div>
+                            <div class="login-signup">
+                                <span class="text">Not a member?
+                                    <a href="#" class="text signup-link">Signup Now</a>
+                                </span>
+                            </div>
+                        </div>
 
-                      <!-- Registration Form -->
-                      <div class="form signup">
-                          <span class="title">Registration</span>
+                        <!-- Registration Form -->
+                        <div class="form signup">
+                            <span class="title">Registration</span>
 
-                          <form action="connect_script.php"method="POST">
-                              <div class="input-field">
-                                  <input type="text"id="name" name="name"placeholder="Enter your name" required>
-                                  <i class="uil uil-user"></i>
-                              </div>
-                              <div class="input-field">
-                                  <input type="text" id="email" name="email"placeholder="Enter your email" required>
-                                  <i class="uil uil-envelope icon"></i>
-                              </div>
-                              <div class="input-field">
-                                  <input type="password" id="password" name="password"class="password" placeholder="Create a password" required>
-                                  <i class="uil uil-lock icon"></i>
-                              </div>
-                              <div class="input-field">
-                                  <input type="password"id="password" name="password" class="password" placeholder="Confirm a password" required>
-                                  <i class="uil uil-lock icon"></i>
-                                  <i class="uil uil-eye-slash showHidePw"></i>
-                              </div>
+                            <form action="connect_script.php" method="POST">
+                                <div class="input-field">
+                                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                                    <i class="uil uil-user"></i>
+                                </div>
+                                <div class="input-field">
+                                    <input type="text" id="email" name="email" placeholder="Enter your email" required>
+                                    <i class="uil uil-envelope icon"></i>
+                                </div>
+                                <div class="input-field">
+                                    <input type="password" id="password" name="password" class="password"
+                                        placeholder="Create a password" required>
+                                    <i class="uil uil-lock icon"></i>
+                                </div>
+                                <div class="input-field">
+                                    <input type="password" id="password" name="password" class="password"
+                                        placeholder="Confirm a password" required>
+                                    <i class="uil uil-lock icon"></i>
+                                    <i class="uil uil-eye-slash showHidePw"></i>
+                                </div>
 
-                              <div class="checkbox-text">
-                                  <div class="checkbox-content">
-                                      <input type="checkbox" id="termCon">
-                                      <label for="termCon" class="text">I accepted all terms and conditions</label>
-                                  </div>
-                              </div>
+                                <div class="checkbox-text">
+                                    <div class="checkbox-content">
+                                        <input type="checkbox" id="termCon">
+                                        <label for="termCon" class="text">I accepted all terms and conditions</label>
+                                    </div>
+                                </div>
 
-                              <div class="input-field button">
-                                  <input type="submit" name="submit" value="Signup">
-                              </div>
-                          </form>
+                                <div class="input-field button">
+                                    <input type="submit" name="submit" value="Signup">
+                                </div>
+                            </form>
 
-                          <div class="login-signup">
-                              <span class="text">Already a member?
-                                  <a href="#" class="text login-link">Login Now</a>
-                              </span>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-      <!-- Home Section End -->
+                            <div class="login-signup">
+                                <span class="text">Already a member?
+                                    <a href="#" class="text login-link">Login Now</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Home Section End -->
 
+        <!-- about section start -->
         <section class="about" id="about">
             <div class="abtext">
                 <h2 class="abtitle">About Us</h2>
@@ -198,7 +201,7 @@
         </section>
         <!-- Service Section Ends -->
 
-<!-- Contact Section Start -->
+        <!-- Contact Section Start -->
         <section id="contact">
             <div class="contact-section">
 
@@ -213,12 +216,73 @@
                 </form>
             </div>
         </section>
-<!-- Contact Section Ends -->
+        <!-- Contact Section Ends -->
     </main>
+
+    <!-- Footer Section Start -->
+    <footer id="footer">
+        <div class="footer-w">
+            <div class="m-left">
+                <h2>NEED HELP?</h2>
+                <div class="location">
+                    <span>
+                        <i class="fas fa-map-marker-alt"></i>
+                    </span>
+                    <span>
+                        <p>1234, Street<br>Abcd, Efgh</p>
+                    </span>
+                </div>
+
+                <div class="location">
+                    <span>
+                        <i class="fas fa-map-marker-alt"></i>
+                    </span>
+                    <span>
+                        <p>1234, Street<br>Abcd, Efgh</p>
+                    </span>
+                </div>
+
+            </div>
+            <div class="m-right">
+                <h2>FOR CONTACT</h2>
+                <div class="contact">
+                    <span>
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <span>
+                        <p>Email<br>abcdefgh@gmail.com</p>
+                    </span>
+                </div>
+
+                <div class="contact">
+                    <span>
+                        <i class="fa fa-mobile" aria-hidden="true"></i>
+                    </span>
+                    <span>
+                        <p>Phone<br>123456789</p>
+                    </span>
+                </div>
+            </div>
+            <div class="s-icons">
+                <h2>BE SOCIAL</h2>
+                <div class="s-box">
+                    <span><i class="fab fa-facebook-f"></i></span>
+                    <span><i class="fab fa-twitter"></i></span>
+                    <span><i class="fab fa-instagram"></i></span>
+                    <span><i class="fab fa-youtube"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="end">
+            <h3>Copyright &copy Group-09</h3>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Back to Top Start -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <!-- Back to Top Ends  -->
+
     <script src="index.js"></script>
 </body>
-
-</html>
-</body>
-
 </html>
