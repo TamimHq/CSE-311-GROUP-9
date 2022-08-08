@@ -13,7 +13,12 @@
    $sql="INSERT INTO feedback(NAME,EMAIL,PHONE,MESSAGE) VALUES('$user_name','$user_email','$user_phone','$user_feed')";
  if(mysqli_query($db,$sql))
  {
- 	echo "Thankyou for feedback";
+  ?>	  
+   <script type="text/javascript">
+      alert("Thankyou for your feedback");
+      window.open("http://localhost/telecommunication%20Management%20System/index.html#contact","_self" );
+   </script>
+   <?php
  }
  else
  {

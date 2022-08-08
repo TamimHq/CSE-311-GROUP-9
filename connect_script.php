@@ -12,11 +12,22 @@
    $sql="INSERT INTO user(NAME,EMAIL,PASSWORD) VALUES('$user_name','$user_email','$user_password')";
  if(mysqli_query($db,$sql))
 {
-   echo " Infromation insert";
-}
+   ?>
+   
+   <script type="text/javascript">
+      alert("Data save succefully");
+      window.open("http://localhost/Telecommunication%20Management%20System/index.html#","_self" );
+   </script>
+   <?php
+
+   }
 else
 {
-   echo "problem".mysqli_errot($db);
+?>
+<script type="text/javascript">
+      alert("There is a problem");
+   </script>
+   <?php
 } 
 
 ?>
