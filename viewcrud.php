@@ -10,7 +10,6 @@ $db = mysqli_connect("localhost","root","","telecommunication_and_management_sys
 
 <table border="1px" cellpadding="10px" cellspacing="0" >
   <tr>
-<th>ID</th>
 <th>Name</th>
 <th>Email</th>
 <th>Password</th>
@@ -30,7 +29,6 @@ while($row=mysqli_fetch_array($data)){
 
 ?>
 <tr>
-<td> <?php  echo$row['ID']; ?></td>
 <td> <?php  echo$row['NAME']; ?></td>
 <td> <?php  echo$row['EMAIL']; ?></td>
 <td> <?php  echo$row['PASSWORD']; ?></td>
