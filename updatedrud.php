@@ -1,27 +1,26 @@
 
-<?php include 'connectingcrud.php';
-
+<?php 
+$db = mysqli_connect("localhost","root","","telecommunication_and_management_system");
+   if(!$db)
+   {
+    die ("database not connected".mysqli_connect_error($db));
+   }
   $iD=$_GET['ID'];
-  $select="SELECT* FROM crud WHERE ID='$iD'  ";
-  $data=mysqli_query($con,$select);
+  $select="SELECT * FROM user WHERE ID='$iD'";
+  $data=mysqli_query($db,$select);
   $row=mysqli_fetch_array($data);
-
 ?>
 <div>
   <form  action=""  method="POST" >
-<input value="<?php echo $row['Name'] ?>" type="text" name="Name"
+<input value="<?php echo $row['NAME'] ?>" type="text" id="NAME" name="NAME"
 placeholder="Name" ><br><br>
 
 <form  action=""  method="POST" >
-<input value="<?php echo $row['Email'] ?>" type="text" type="text" name="Email"
+<input value="<?php echo $row['EMAIL'] ?>" type="text" id="EMAIL" name="EMAIL"
 placeholder="Email" ><br><br>
 
 <form  action=""  method="POST" >
-<input value="<?php echo $row['Mobile'] ?>" type="text" type="number" name="Mobile"
-placeholder="Mobile" ><br><br>
-
-<form  action=""  method="POST" >
-<input value="<?php echo $row['Password'] ?>" type="text" type="number" name="Password"
+<input value="<?php echo $row['PASSWORD'] ?>" type="text" id="text" name="PASSWORD"
 placeholder="Password" ><br><br>
 
 
@@ -37,25 +36,24 @@ value="Update">
 
 
 <?php
+
 if(isset($_POST['update_btn'])){
 
-$Sname=$_POST['Name'];
+$Sname=$_POST['NAME'];
 
-$SEmail=$_POST['Email'];
+$SEmail=$_POST['EMAIL'];
 
-$Smobile=$_POST['Mobile'];
-$Spassword=$_POST['Password'];
+$Spassword=$_POST['PASSWORD'];
 
-$update="UPDATE  crud SET Name='$Sname', Email='$SEmail', Mobile='$Smobile', Password='$Spassword' WHERE ID='  $iD' ";
-$data=mysqli_query($con,$update);
+$update="UPDATE user SET NAME='$Sname', EMAIL='$SEmail',PASSWORD='$Spassword' WHERE ID='$iD'";
 
-if($data){
+if(mysqli_query($db,$update)){
 
 ?>
 <script type="text/javascript">
 
 alert("DATA Updated Successfully");
-window.open("http://localhost:8090/CRUDOperation/viewcrud.php","_self" );
+window.open("http://localhost/telecommunication%20Management%20System/viewcrud.php","_self" );
 </script>
 <?php
 

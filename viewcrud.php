@@ -1,12 +1,18 @@
-<?php include 'connectingcrud.php';   ?>
+<?php 
+$db = mysqli_connect("localhost","root","","telecommunication_and_management_system");
+   if(!$db)
+   {
+    die ("database not connected".mysqli_connect_error($db));
+   }
+?>
 
 <a href="insertcrud.php"> Home </a>
 
 <table border="1px" cellpadding="10px" cellspacing="0" >
   <tr>
+<th>ID</th>
 <th>Name</th>
 <th>Email</th>
-<th>Mobile</th>
 <th>Password</th>
 
 <th colspan="2"> Actions </th>
@@ -15,8 +21,8 @@
 
 
 <?php
-$query="SELECT * FROM crud";
-$data=mysqli_query($con, $query);
+$query="SELECT * FROM user";
+$data=mysqli_query($db, $query);
 $result=mysqli_num_rows($data);
 
 if($result){
@@ -24,11 +30,10 @@ while($row=mysqli_fetch_array($data)){
 
 ?>
 <tr>
-
-<td> <?php  echo$row['Name']; ?></td>
-<td> <?php  echo$row['Email']; ?></td>
-<td> <?php  echo$row['Mobile']; ?></td>
-<td> <?php  echo$row['Password']; ?></td>
+<td> <?php  echo$row['ID']; ?></td>
+<td> <?php  echo$row['NAME']; ?></td>
+<td> <?php  echo$row['EMAIL']; ?></td>
+<td> <?php  echo$row['PASSWORD']; ?></td>
 <td><a href="updatedrud.php? ID= <?php  echo $row['ID']; ?>"  > Edit </a> </td>
 <td> <a onclick="return confirm('Are you Sure?')" href="deletecrud.php? ID= <?php  echo $row['ID']; ?>" >Delete </a>   </td>
 
