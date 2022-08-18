@@ -1,49 +1,75 @@
-<?php 
+<!DOCTYPE html>
+<html>
+<head>
+ <title></title>
+
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+ <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+
+  <script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+
+</head>
+<body>
+
+ <div class="container">
+ <div class="col-lg-12">
+ <br><br>
+ <h1 class="text-warning text-center" > Display Table Data </h1>
+ <br>
+ <table  id="tabledata" class=" table table-striped table-hover table-bordered">
+ 
+ <tr class="bg-dark text-white text-center">
+ 
+ <th> Name </th>
+ <th> Email </th>
+ <th> Phone </th>
+ <th> Message</th>
+ <th> Delete </th>
+
+ </tr >
+
+ <?php
+
 $db = mysqli_connect("localhost","root","","telecommunication_and_management_system");
    if(!$db)
    {
     die ("database not connected".mysqli_connect_error($db));
-   }
-?>
+   } 
+ $q = "select * from feedback ";
 
-<a href="insertcrud.php"> Home </a>
+$query = mysqli_query($db,$q);
 
-<table border="1px" cellpadding="10px" cellspacing="0" >
-  <tr>
-<th>Name</th>
-<th>Email</th>
-<th>Password</th>
-
-<th colspan="2"> Actions </th>
-
-  </tr>
-
-
-<?php
-$query="SELECT * FROM feedback";
-$data=mysqli_query($db, $query);
-$result=mysqli_num_rows($data);
-
-if($result){
-while($row=mysqli_fetch_array($data)){
-
-?>
-<tr>
-<td> <?php  echo$row['NAME']; ?></td>
-<td> <?php  echo$row['EMAIL']; ?></td>
-<td> <?php  echo$row['PHONE']; ?></td>
-<td> <?php  echo$row['MESSAGE']; ?></td>
-<td> <a onclick="return confirm('Are you Sure?')" href="delete.php? ID= <?php  echo $row['ID']; ?>" >Delete </a>   </td>
-
-</tr>
-
-<?php
-
-
-}
-
-}
-
+ while($res = mysqli_fetch_array($query)){
  ?>
+ <tr class="text-center">
+ <td> <?php echo $res['NAME'];  ?> </td>
+ <td> <?php echo $res['EMAIL'];  ?> </td>
+ <td> <?php echo $res['PHONE'];  ?> </td>
+ <td> <?php echo $res['MESSAGE'];  ?> </td>
+ <td> <button class="btn-danger btn"> <a onclick="return confirm('Are you Sure?')" href="delete.php?ID=<?php echo $res['ID']; ?>" class="text-white"> Delete </a>  </button> </td>
+ </tr>
 
-</table>
+ <?php 
+ }
+ ?>
+ 
+ </table>  
+
+ </div>
+ </div>
+
+ <script type="text/javascript">
+ 
+ $(document).ready(function(){
+ $('#tabledata').DataTable();
+ }) 
+ 
+ </script>
+
+</body>
+</html>
