@@ -1,53 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title></title>
 
-<?php 
-$db = mysqli_connect("localhost","root","","telecommunication_and_management_system");
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+ <div class="col-lg-6 m-auto">
+ 
+ <form method="post">
+ 
+ <br><br><div class="card">
+ 
+ <div class="card-header bg-dark">
+ <h1 class="text-white text-center">  Update Operation </h1>
+ </div><br>
+<?php
+
+ $db = mysqli_connect("localhost","root","","telecommunication_and_management_system");
    if(!$db)
    {
     die ("database not connected".mysqli_connect_error($db));
-   }
-  $iD=$_GET['ID'];
-  $select="SELECT * FROM user WHERE ID='$iD'";
+   } 
+  $id = $_GET['ID'];
+  $select="SELECT * FROM user WHERE ID='$id'";
   $data=mysqli_query($db,$select);
   $row=mysqli_fetch_array($data);
 ?>
-<div>
-  <form  action=""  method="POST" >
-<input value="<?php echo $row['NAME'] ?>" type="text" id="NAME" name="NAME"
-placeholder="Name" ><br><br>
 
-<form  action=""  method="POST" >
-<input value="<?php echo $row['EMAIL'] ?>" type="text" id="EMAIL" name="EMAIL"
-placeholder="Email" ><br><br>
+ <label> Username: </label>
+ <input value="<?php echo $row['NAME'] ?>" type="text" name="NAME" class="form-control"> <br>
 
-<form  action=""  method="POST" >
-<input value="<?php echo $row['PASSWORD'] ?>" type="text" id="text" name="PASSWORD"
-placeholder="Password" ><br><br>
+ <label> Password: </label>
+ <input value="<?php echo $row['PASSWORD'] ?>"type="text" name="PASSWORD" class="form-control"> <br>
 
+ <button class="btn btn-success" type="submit" name="update"> Submit </button><br>
 
-<input type="submit" name="update_btn"
-value="Update">
+ </div>
+ <?php
+  if(isset($_POST['update'])){
 
-<button> <a href="viewcrud.php">  Back  </a> </button>
+ $id = $_GET['ID'];
+ $username = $_POST['NAME'];
+ $password = $_POST['PASSWORD'];
+ $update = " update user set NAME='$username', PASSWORD='$password' where ID=$id  ";
 
-
-</form>
-</div>
-
-
-
-<?php
-
-if(isset($_POST['update_btn'])){
-
-$Sname=$_POST['NAME'];
-
-$SEmail=$_POST['EMAIL'];
-
-$Spassword=$_POST['PASSWORD'];
-
-$update="UPDATE user SET NAME='$Sname', EMAIL='$SEmail',PASSWORD='$Spassword' WHERE ID='$iD'";
-
-if(mysqli_query($db,$update)){
+ if(mysqli_query($db,$update)){
 
 ?>
 <script type="text/javascript">
@@ -68,6 +71,11 @@ else{
   <?php
 }
 
-}
+ 
+ }
 
 ?>
+ </form>
+ </div>
+</body>
+</html>
