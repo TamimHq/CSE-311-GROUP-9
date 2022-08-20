@@ -19,12 +19,12 @@
  <div class="container">
  <div class="col-lg-12">
  <br><br>
- <h1 class="text-warning text-center" > Display Table Data </h1>
+ <h1 class="text-warning text-center" > DISPLAY USER INFORMATION </h1>
  <br>
  <table  id="tabledata" class=" table table-striped table-hover table-bordered">
  
  <tr class="bg-dark text-white text-center">
- 
+ <th>ID</th>
  <th> Name </th>
  <th> Email </th>
  <th> Password </th>
@@ -47,6 +47,7 @@ $query = mysqli_query($db,$q);
  while($res = mysqli_fetch_array($query)){
  ?>
  <tr class="text-center">
+ <td> <?php echo $res['ID'];  ?> </td>
  <td> <?php echo $res['NAME'];  ?> </td>
  <td> <?php echo $res['EMAIL'];  ?> </td>
  <td> <?php echo $res['PASSWORD'];  ?> </td>

@@ -31,5 +31,22 @@ alert("Please Try Again")
 <?php
 
 }
+$query=mysqli_query($db,"select * from feedback");
+    $number=1;
+    while($row=mysqli_fetch_array($query)){
+        $id=$row['ID'];
+        $sql = "UPDATE feedback SET ID=$number WHERE ID=$id";
+        if($db->query($sql) == TRUE){
+            echo "Record RESET succesfully<br>";
+        }
+        $number++;
+    }
+     $sql = "ALTER TABLE feedback AUTO_INCREMENT =1";
+    if($db->query($sql) == TRUE){
+        echo "Record ALTER succesfully";
+    }else{
+        echo"Error ALTER record: " . $db->error;
+    } 
+
 
  ?>
