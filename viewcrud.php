@@ -24,6 +24,10 @@
  <table  id="tabledata" class=" table table-striped table-hover table-bordered">
  
  <tr class="bg-dark text-white text-center">
+<<<<<<< Updated upstream
+=======
+ 
+>>>>>>> Stashed changes
  <th>ID</th>
  <th> Name </th>
  <th> Email </th>
@@ -47,10 +51,13 @@ $query = mysqli_query($db,$q);
  while($res = mysqli_fetch_array($query)){
  ?>
  <tr class="text-center">
+<<<<<<< Updated upstream
  <td> <?php echo $res['ID'];  ?> </td>
+=======
+ <td><?php echo $res['ID']; ?></td>
+>>>>>>> Stashed changes
  <td> <?php echo $res['NAME'];  ?> </td>
  <td> <?php echo $res['EMAIL'];  ?> </td>
- <td> <?php echo $res['PASSWORD'];  ?> </td>
  <td> <button class="btn-danger btn"> <a onclick="return confirm('Are you Sure?')" href="deletecrud.php?ID=<?php echo $res['ID']; ?>" class="text-white"> Delete </a>  </button> </td>
  <td> <button class="btn-primary btn"> <a href="updatedrud.php?ID=<?php echo $res['ID']; ?>" class="text-white"> Update </a> </button> </td>
 
