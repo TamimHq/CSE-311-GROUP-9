@@ -9,8 +9,7 @@
    {
    	echo "Database connected"."<br>";
    }
-
-  $sql= "CREATE TABLE user(ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,NAME VARCHAR(30) NOT NULL,EMAIL VARCHAR(30) NOT NULL, PASSWORD VARCHAR(30) NOT NULL)";
+    $sql= "CREATE TABLE user(ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,NAME VARCHAR(30) NOT NULL,EMAIL VARCHAR(30) NOT NULL, PASSWORD VARCHAR(30) NOT NULL)";
     if(mysqli_query($db,$sql))
   {
      echo "table created";
@@ -19,6 +18,7 @@
   {
      echo "there is an problem";
    }
+   $sql1="ALTER TABLE user AUTO_INCREMENT=1";
    $sql2="CREATE TABLE Admin(ID INT NOT NULL PRIMARY KEY, NAME VARCHAR(30) NOT NULL,EMAIL VARCHAR(30) NOT NULL, PASSWORD VARCHAR(30) NOT NULL)";
   if(mysqli_query($db,$sql2))
   {
@@ -37,8 +37,18 @@
    {
      echo "there is an problem".mysqli_errot($db);
    }
-  $sql4="CREATE TABLE Feedback(NAME VARCHAR(30) NOT NULL,EMAIL VARCHAR(30) NOT NULL,PHONE VARCHAR(30) NOT NULL,MESSAGE VARCHAR(200) NOT NULL)";
+  $sql4="CREATE TABLE Feedback(ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,NAME VARCHAR(30) NOT NULL,EMAIL VARCHAR(30) NOT NULL,PHONE VARCHAR(30) NOT NULL,MESSAGE VARCHAR(200) NOT NULL)";
   if(mysqli_query($db,$sql4))
+  {
+   echo "Table created";
+  }
+  else
+  {
+   echo "there is an problem".mysqli_errot($db);
+  }
+
+  $sql5="CREATE TABLE PACKS(ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,MINUTE VARCHAR(30),DATA VARCHAR(30),SMS VARCHAR(30),VALIDITY time NOT NULL,Price FLOAT NOT NULL)";
+  if(mysqli_query($db,$sql5))
   {
    echo "Table created";
   }
