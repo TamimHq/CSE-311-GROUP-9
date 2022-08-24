@@ -227,8 +227,10 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
+                                            <a href="viewpacks.php">
                                             <div class="text-xs font-weight-bold text-info text-uppercase mb-1">PACKS
                                             </div>
+                                            </a>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
                                                 </div>
