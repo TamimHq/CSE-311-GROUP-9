@@ -30,21 +30,9 @@ session_start();
                         <form action="InsertPack.php" method="POST">
 
                             <div class="mb-3">
-                                <label>MINUTE</label>
-                                <input type="text" name="minute" class="form-control">
-                            </div>
-                            <div class="mb-3">
-                                <label>DATA</label>
-                                <input type="text" name="data" class="form-control">
-                            </div>
-                            <div class="mb-3">
-                                <label>SMS</label>
-                                <input type="text" name="sms" class="form-control">
-                            </div>
-                             <div class="mb-3">
-                                <label>VALIDITY</label>
-                                <input type="text" name="validity" class="form-control">
-                            </div>
+                                <label>Packs Name</label>
+                                <input type="text" name="pack" class="form-control">
+                            </div
                             <div class="mb-3">
                                 <label>PRICE</label>
                                 <input type="float-end" name="price" class="form-control">

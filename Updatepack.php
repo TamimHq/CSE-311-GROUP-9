@@ -33,16 +33,9 @@
   $row=mysqli_fetch_array($data);
 ?>
 
- <label> MINUTE: </label>
- <input value="<?php echo $row['MINUTE'] ?>" type="text" name="minute" class="form-control"> <br>
-
- <label> DATA: </label>
- <input value="<?php echo $row['DATA'] ?>"type="text" name="data" class="form-control"> <br>
-  <label> SMS: </label>
- <input value="<?php echo $row['SMS'] ?>"type="text" name="sms" class="form-control"> <br>
-  <label> VALIDITY: </label>
- <input value="<?php echo $row['VALIDITY'] ?>"type="text" name="validity" class="form-control"> <br>
-  <label> PRICE: </label>
+ <label> Packs: </label>
+ <input value="<?php echo $row['PACKS'] ?>" type="text" name="pack" class="form-control"> <br>
+  <label> Price: </label>
  <input value="<?php echo $row['Price'] ?>"type="float-end" name="price" class="form-control"> <br>
 
  <button class="btn btn-success" type="submit" name="update"> Submit </button><br>
@@ -51,13 +44,10 @@
  <?php
   if(isset($_POST['update'])){
 
- $id = $_GET['ID'];
-   $min=$_POST["minute"];
-   $data=$_POST["data"];
-   $sms=$_POST["sms"];
-   $validity=$_POST["validity"];
+  $id = $_GET['ID'];
+   $packs=$_POST['pack'];
    $price=$_POST["price"];
- $update = " update packs set MINUTE='$min', DATA='$data',SMS='$sms',VALIDITY='$validity',Price='$price' where ID=$id  ";
+ $update = " update packs set PACKS='$packs',Price='$price' where ID=$id  ";
 
  if(mysqli_query($db,$update)){
 

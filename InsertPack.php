@@ -5,13 +5,11 @@
    {
    	die ("database not connected".mysqli_connect_error($db));
    }
-   $min=$_POST["minute"];
-   $data=$_POST["data"];
-   $sms=$_POST["sms"];
-   $validity=$_POST["validity"];
-   $price=$_POST["price"];
 
-   $sql="INSERT INTO packs(MINUTE,DATA,SMS,VALIDITY,Price) VALUES('$min','$data','$sms','$validity','$price')";
+   $packs=$_POST['pack'];
+   $price=$_POST['price'];
+
+   $sql="INSERT INTO packs(PACKS,Price) VALUES('$packs','$price')";
  if(mysqli_query($db,$sql))
 {
    ?>

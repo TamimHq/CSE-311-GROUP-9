@@ -188,10 +188,7 @@
  
  <tr class="bg-dark text-white text-center">
  <th>ID</th>
- <th> MINUTE </th>
- <th> DATA </th>
- <th> SMS </th>
- <th>VALIDITY</th>
+ <th> PACKS</th>
  <th> PRICE</th>
  <th> Delete </th>
  <th>Update</th>
@@ -213,10 +210,7 @@ $query = mysqli_query($db,$q);
  ?>
  <tr class="text-center">
  <td> <?php echo $res['ID'];  ?> </td>
- <td> <?php echo $res['MINUTE'];  ?> </td>
- <td> <?php echo $res['DATA'];  ?> </td>
- <td> <?php echo $res['SMS'];  ?> </td>
- <td> <?php echo $res['VALIDITY'];  ?> </td>
+ <td> <?php echo $res['PACKS'];  ?> </td>
  <td> <?php echo $res['Price'];  ?> </td>
  <td> <button class="btn-danger btn"> <a onclick="return confirm('Are you Sure?')" href="Deletepacks.php?ID=<?php echo $res['ID']; ?>" class="text-white"> Delete </a>  </button> </td>
  <td> <button class="btn-primary btn"> <a href="Updatepack.php?ID=<?php echo $res['ID']; ?>" class="text-white"> Update </a> </button> </td>
