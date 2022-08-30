@@ -56,7 +56,7 @@
 <script type="text/javascript">
 
 alert("DATA Updated Successfully");
-window.open("http://localhost/telecommunication%20Management%20System/viewcrud.php","_self" );
+window.open("http://localhost/Telecommunication-Management-System/viewcrud.php","_self" );
 </script>
 <?php
 
