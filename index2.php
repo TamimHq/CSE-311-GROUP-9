@@ -69,8 +69,8 @@
                         <h6 class="collapse-header">Custom Components:</h6>
                         <a class="collapse-item" href="viewfeed.php">View feedback</a>
                         <a class="collapse-item" href="viewcrud.php">View user-info</a>
-                        <a class="collapse-item" href="viewcrud.php">Pack details</a>
-                        <a class="collapse-item" href="viewcrud.php">Payment History</a>
+                        <a class="collapse-item" href="viewpacks.php">Pack details</a>
+                        <a class="collapse-item" href="">Payment History</a>
                     </div>
                 </div>
             </li>
