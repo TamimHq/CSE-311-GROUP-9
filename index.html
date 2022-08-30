@@ -8,7 +8,6 @@
     <meta name="keywords" content="MegaPhone, MobileOperator">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="rsp.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -23,13 +22,13 @@
             <label for="check" class="checkbtn">
                 <i class="fas fa-bars"></i>
             </label>
-            <label class="logo">MegaPhone</label>
+            <label class="logo">MegaPhone</label></a>
             <ul>
                 <li><a class="active" href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#service">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="admin.html" target="_blank">Admin</a></li>
+                <li><a href="admin.html">Admin</a></li>
             </ul>
         </nav>
     </header>
@@ -45,7 +44,7 @@
                         <div class="form login">
                             <span class="title">Login</span>
 
-                            <form action="user_login.php" method="POST">
+                            <form action="user_login.php" method="POST" autocomplete="off">
                                 <div class="input-field">
                                     <input type="text" id="email" name="email" placeholder="Enter your email" required>
                                     <i class="uil uil-envelope icon"></i>
@@ -82,7 +81,7 @@
                         <div class="form signup">
                             <span class="title">Registration</span>
 
-                            <form action="user_signup.php" method="POST">
+                            <form action="user_signup.php" method="POST" autocomplete="off">
                                 <div class="input-field">
                                     <input type="text" id="name" name="name" placeholder="Enter your name" required>
                                     <i class="uil uil-user"></i>
@@ -207,7 +206,7 @@
 
                 <h1>Contact Us</h1>
                 <div class="border"></div>
-                <form class="contact-form" action="feedback.php" method="POST">
+                <form class="contact-form" action="feedback.php" method="POST" autocomplete="off">
                     <input type="text"id="name" name="name" class="contact-form-text" placeholder="Your name">
                     <input type="email" id="email" name="email" class="contact-form-text" placeholder="Your email">
                     <input type="text" id="phone" name="phone" class="contact-form-text" placeholder="Your phone">
@@ -280,7 +279,7 @@
     <!-- Footer Section End -->
 
     <!-- Back to Top Start -->
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">&#8593;</button>
     <!-- Back to Top Ends  -->
 
     <script src="index.js"></script>
