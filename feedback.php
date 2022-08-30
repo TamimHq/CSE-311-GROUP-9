@@ -16,7 +16,7 @@
   ?>	  
    <script type="text/javascript">
       alert("Thankyou for your feedback");
-      window.open("http://localhost/Telecommunication-Management-System/index.html#contact","_self" );
+      window.open("http://localhost/telecommunication%20Management%20System/index.html#contact","_self" );
    </script>
    <?php
  }

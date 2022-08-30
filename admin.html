@@ -12,24 +12,6 @@
 </head>
 
 <body>
-
-    <header>
-        <nav>
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-                <i class="fas fa-bars"></i>
-            </label>
-            <label class="logo">MegaPhone</label>
-            <ul>
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#service">Services</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-                <li><a href="index.html#home">User</a></li>            
-            </ul>
-        </nav>
-    </header>
-
     <section id="admin">
         <div id="section1">
             <div class="container">
@@ -38,7 +20,7 @@
                     <div class="form login">
                         <span class="title">Login</span>
 
-                        <form action="admin_login.php"method="POST" autocomplete="off">
+                        <form action="admin_login.php"method="POST">
                             <div class="input-field">
                                 <input type="text" id="email"name="email" placeholder="Enter your email" required>
                                 <i class="uil uil-envelope icon"></i>
@@ -46,6 +28,16 @@
                             <div class="input-field">
                                 <input type="password" id="password" name="password" class="password" placeholder="Enter your password" required>
                                 <i class="uil uil-lock icon"></i>
+                                <i class="uil uil-eye-slash showHidePw"></i>
+                            </div>
+
+                            <div class="checkbox-text">
+                                <div class="checkbox-content">
+                                    <input type="checkbox" id="logCheck">
+                                    <label for="logCheck" class="text">Remember me</label>
+                                </div>
+
+                                <a href="#" class="text">Forgot password?</a>
                             </div>
 
                             <div class="input-field button">

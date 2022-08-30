@@ -18,7 +18,7 @@
  <br><br><div class="card">
  
  <div class="card-header bg-dark">
- <h1 class="text-white text-center">  Update Operation </h1>
+ <h1 class="text-white text-center">  Update INFO </h1>
  </div><br>
 <?php
 
@@ -56,7 +56,7 @@
 <script type="text/javascript">
 
 alert("DATA Updated Successfully");
-window.open("http://localhost/Telecommunication-Management-System/viewcrud.php","_self" );
+window.open("http://localhost/telecommunication%20Management%20System/viewcrud.php","_self" );
 </script>
 <?php
 

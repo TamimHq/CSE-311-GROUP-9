@@ -34,7 +34,7 @@
    }
    else
    {
-     echo "there is an problem".mysqli_error($db);
+     echo "there is an problem".mysqli_errot($db);
    }
   $sql4="CREATE TABLE Feedback(ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,NAME VARCHAR(30) NOT NULL,EMAIL VARCHAR(30) NOT NULL,PHONE VARCHAR(30) NOT NULL,MESSAGE VARCHAR(200) NOT NULL)";
   if(mysqli_query($db,$sql4))
@@ -43,17 +43,17 @@
   }
   else
   {
-   echo "there is an problem".mysqli_error($db);
+   echo "there is an problem".mysqli_errot($db);
   }
 
-  $sql5="CREATE TABLE PACKS(ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,MINUTE VARCHAR(30),DATA VARCHAR(30),SMS VARCHAR(30),VALIDITY VARCHAR(30) NOT NULL,Price FLOAT NOT NULL)";
+  $sql5="CREATE TABLE products( ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY, products VARCHAR(30) NOT NULL, Price VARCHAR(30) NOT NULL )";
   if(mysqli_query($db,$sql5))
   {
    echo "Table created";
   }
   else
   {
-   echo "there is an problem".mysqli_error($db);
+   echo "there is an problem".mysqli_errot($db);
   }
 
 ?>

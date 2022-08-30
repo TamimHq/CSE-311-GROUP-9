@@ -202,7 +202,7 @@ $db = mysqli_connect("localhost","root","","telecommunication_and_management_sys
    {
     die ("database not connected".mysqli_connect_error($db));
    } 
- $q = "select * from packs ";
+ $q = "select * from products ";
 
 $query = mysqli_query($db,$q);
 
@@ -210,7 +210,7 @@ $query = mysqli_query($db,$q);
  ?>
  <tr class="text-center">
  <td> <?php echo $res['ID'];  ?> </td>
- <td> <?php echo $res['PACKS'];  ?> </td>
+ <td> <?php echo $res['products'];  ?> </td>
  <td> <?php echo $res['Price'];  ?> </td>
  <td> <button class="btn-danger btn"> <a onclick="return confirm('Are you Sure?')" href="Deletepacks.php?ID=<?php echo $res['ID']; ?>" class="text-white"> Delete </a>  </button> </td>
  <td> <button class="btn-primary btn"> <a href="Updatepack.php?ID=<?php echo $res['ID']; ?>" class="text-white"> Update </a> </button> </td>

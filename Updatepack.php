@@ -28,13 +28,13 @@
     die ("database not connected".mysqli_connect_error($db));
    } 
   $id = $_GET['ID'];
-  $select="SELECT * FROM packs WHERE ID='$id'";
+  $select="SELECT * FROM products WHERE ID='$id'";
   $data=mysqli_query($db,$select);
   $row=mysqli_fetch_array($data);
 ?>
 
  <label> Packs: </label>
- <input value="<?php echo $row['PACKS'] ?>" type="text" name="pack" class="form-control"> <br>
+ <input value="<?php echo $row['products'] ?>" type="text" name="pack" class="form-control"> <br>
   <label> Price: </label>
  <input value="<?php echo $row['Price'] ?>"type="float-end" name="price" class="form-control"> <br>
 
@@ -47,7 +47,7 @@
   $id = $_GET['ID'];
    $packs=$_POST['pack'];
    $price=$_POST["price"];
- $update = " update packs set PACKS='$packs',Price='$price' where ID=$id  ";
+ $update = " update products set products='$packs',Price='$price' where ID=$id  ";
 
  if(mysqli_query($db,$update)){
 
@@ -55,7 +55,7 @@
 <script type="text/javascript">
 
 alert("DATA Updated Successfully");
-window.open("http://localhost/Telecommunication-Management-System/viewpacks.php","_self" );
+window.open("http://localhost/Telecommunication%20Management%20System/viewpacks.php","_self" );
 </script>
 <?php
 

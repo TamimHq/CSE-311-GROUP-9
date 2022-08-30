@@ -25,12 +25,6 @@ body {
 
 /* Navigation Bar Start */
 
-header{
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
 nav {
     background: black;
     height: 80px;
@@ -593,21 +587,28 @@ span i {
     display: none;
     position: fixed;
     bottom: 20px;
-    right: 10px;
+    right: 30px;
     z-index: 99;
     border: none;
     outline: none;
-    background-color: black;
+    background-color: red;
     color: white;
     cursor: pointer;
     padding: 15px;
     border-radius: 10px;
-    font-size: 30px;
+    font-size: 18px;
 }
 
 #myBtn:hover {
-    background-color: whitesmoke;
-    color: black;
+    background-color: blue;
 }
 
 /* Back To Top End */
+
+/* admin  */
+
+#admin {
+    margin-top: 20px;
+}
+
+/* admin */

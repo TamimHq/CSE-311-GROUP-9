@@ -24,7 +24,7 @@
       ?>
       <script type="text/javascript" >
         alert("Log-in success")
-        window.open("http://localhost/Telecommunication-Management-System/index2.php","_self");
+        window.open("http://localhost/Telecommunication%20Management%20System/index2.php","_self");
 
         </script>
 
@@ -36,7 +36,7 @@
       ?>
       <script type="text/javascript" >
         alert("There is a problem")
-        window.open("http://localhost/Telecommunication-Management-System/admin.html","_self");
+        window.open("http://localhost/Telecommunication%20Management%20System/admin.html","_self");
 
         </script>
         <?php

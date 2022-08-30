@@ -67,10 +67,10 @@ h5{
                <div class="product-detail">
 
                 <div class="other-detail">
-                    <h3><?=$row['product_name']?></h4>
+                    <h3><?=$row['products']?></h4>
                     <div class="price-style">
-                    <p class="price"> $ <?=$row['price']?></p>
-                    <a href="Cartaction.php?action_type=add_item&id=<?=$row['id']?>&product_name=<?=$row['product_name']?>&quantity=1&price=<?=$row['price']?>" class="btn btn-warning btn-style">Add to Cart</a>
+                    <p class="price"> ৳ <?=$row['Price']?></p>
+                    <a href="Cartaction.php?action_type=add_item&ID=<?=$row['ID']?>&products=<?=$row['products']?>&quantity=1&Price=<?=$row['Price']?>" class="btn btn-warning btn-style">Add to Cart</a>
                     </div>
                   </div>
                </div>
@@ -86,22 +86,21 @@ h5{
           <table class="table table-bordered">
               <thead>
                  <th>Serial Number</th>
-                 <th>Offer</th>
+                 <th>Pack Name</th>
                  <th>Quantity</th>
                  <th>COST</th>
-                 <th>Opportunity</th>
               </thead>
               <tbody>
                 <?php
                 $index =0;
                 $i=1;
                 foreach($_SESSION['cart'] as $key => $val) {
-                  $totalPrice = $val['quantity'] * $val['price'];
+                  $totalPrice = $val['quantity'] * $val['Price'];
                   $Total = $Total + $totalPrice;
                   ?>
                 <tr>
                    <td><?=$i++?></td>
-                   <td><?=$val['product_name']?></td>
+                   <td><?=$val['products']?></td>
                    <td><?=$val['quantity']?></td>
                    <td><?=$totalPrice?></td>
                    <td><a href="Cartaction.php?action_type=remove_item&index=<?=$key?>">Remove </a></td>
@@ -110,7 +109,7 @@ h5{
               <tr>
                 <td></td>
                 <td></td>
-                <td><b>Calculation</b></td>
+                <td><b>Total</b></td>
                 <td><?=$Total?></td>
                 <td></td>
               </tr>

@@ -9,14 +9,14 @@
    $packs=$_POST['pack'];
    $price=$_POST['price'];
 
-   $sql="INSERT INTO packs(PACKS,Price) VALUES('$packs','$price')";
+   $sql="INSERT INTO products(products,Price) VALUES('$packs','$price')";
  if(mysqli_query($db,$sql))
 {
    ?>
    
    <script type="text/javascript">
       alert("Data save succefully");
-      window.open("http://localhost/Telecommunication-Management-System/viewpacks.php","_self" );
+      window.open("http://localhost/Telecommunication%20Management%20System/viewpacks.php","_self" );
    </script>
    <?php
 
@@ -29,3 +29,5 @@ else
    </script>
    <?php
 } 
+
+?>

@@ -6,14 +6,14 @@ $db = mysqli_connect("localhost","root","","telecommunication_and_management_sys
    }
 
 $id=$_GET['ID'];
-$query="DELETE FROM packs WHERE ID='$id' ";
+$query="DELETE FROM products WHERE ID='$id' ";
 
 
 if(mysqli_query($db,$query)){
 ?>
 <script type="text/javascript" >
 alert("Data Deleted Successfully")
-window.open("http://localhost/Telecommunication-Management-System/viewpacks.php","_self");
+window.open("http://localhost/Telecommunication%20Management%20System/viewpacks.php","_self");
 
 </script>
 <?php
@@ -31,17 +31,17 @@ alert("Please Try Again")
 <?php
 
 }
-$query=mysqli_query($db,"select * from packs");
+$query=mysqli_query($db,"select * from products");
     $number=1;
     while($row=mysqli_fetch_array($query)){
         $id=$row['ID'];
-        $sql = "UPDATE packs SET ID=$number WHERE ID=$id";
+        $sql = "UPDATE products SET ID=$number WHERE ID=$id";
         if($db->query($sql) == TRUE){
             ;
         }
         $number++;
     }
-     $sql = "ALTER TABLE packs AUTO_INCREMENT =1";
+     $sql = "ALTER TABLE products AUTO_INCREMENT =1";
     if($db->query($sql) == TRUE){
         ;
     }else{

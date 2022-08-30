@@ -13,7 +13,7 @@ if($data){
 ?>
 <script type="text/javascript" >
 alert("Data Deleted Successfully")
-window.open("http://localhost/Telecommunication-Management-System/viewcrud.php","_self");
+window.open("http://localhost/telecommunication%20Management%20System/viewcrud.php","_self");
 
 </script>
 <?php
@@ -38,13 +38,13 @@ alert("Please Try Again")
         $id=$row['ID'];
         $sql = "UPDATE user SET ID=$number WHERE ID=$id";
         if($db->query($sql) == TRUE){
-            echo "Record RESET succesfully<br>";
+            ;
         }
         $number++;
     }
      $sql = "ALTER TABLE user AUTO_INCREMENT =1";
     if($db->query($sql) == TRUE){
-        echo "Record ALTER succesfully";
+        ;
     }else{
         echo"Error ALTER record: " . $db->error;
     } 
