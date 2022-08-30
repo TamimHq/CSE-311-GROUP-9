@@ -13,7 +13,7 @@ if($data){
 ?>
 <script type="text/javascript" >
 alert("Data Deleted Successfully")
-window.open("http://localhost/telecommunication%20Management%20System/viewfeed.php","_self");
+window.open("http://localhost/Telecommunication-Management-System/viewfeed.php","_self");
 
 </script>
 <?php
