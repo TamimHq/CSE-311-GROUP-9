@@ -57,7 +57,7 @@ h5{
         <div class="col-md-6">
           <div class="row">
             <?php
-            $cn = mysqli_connect('localhost','root','','ccart');
+            $cn = mysqli_connect('localhost','root','','telecommunication_and_management_system');
             $slr = "SELECT * FROM products";
             $query = mysqli_query($cn,$slr);
             while($row = mysqli_fetch_assoc($query))
