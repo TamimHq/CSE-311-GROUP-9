@@ -1,4 +1,5 @@
 <?php
+     session_start();
    $db = mysqli_connect("localhost","root","","telecommunication_and_management_system");
    if(!$db)
    {
@@ -11,9 +12,9 @@
      $sql="SELECT * FROM user WHERE EMAIL='$user_email' AND PASSWORD='$user_password' ";
 
      $result = mysqli_query($db,$sql);
+     $r= mysqli_fetch_assoc($result);
     if (mysqli_num_rows($result)==1) {
-      echo " ";
-      // header('location:user_profile.php');
+      $_SESSION['name']=$r['NAME'];
    }
      else
      {
@@ -277,7 +278,7 @@ textarea.contact-form-text {
     <main>
         <div class="user">
             <P> Welcome
-                <?php echo $_POST['email']?>
+                <?php echo ($_SESSION['name']);?>
             </P>
         </div>
 
