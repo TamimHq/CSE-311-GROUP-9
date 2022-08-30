@@ -13,7 +13,7 @@ if(mysqli_query($db,$query)){
 ?>
 <script type="text/javascript" >
 alert("Data Deleted Successfully")
-window.open("http://localhost/Telecommunication%20Management%20System/viewpacks.php","_self");
+window.open("http://localhost/Telecommunication-Management-System/viewpacks.php","_self");
 
 </script>
 <?php
