@@ -16,7 +16,7 @@
    
    <script type="text/javascript">
       alert("Data save succefully");
-      window.open("http://localhost/Telecommunication%20Management%20System/index.html#","_self" );
+      window.open("http://localhost/Telecommunication-Management-System/index.html#","_self" );
    </script>
    <?php
 
