@@ -55,7 +55,7 @@
 <script type="text/javascript">
 
 alert("DATA Updated Successfully");
-window.open("http://localhost/Telecommunication%20Management%20System/viewpacks.php","_self" );
+window.open("http://localhost/Telecommunication-Management-System/viewpacks.php","_self" );
 </script>
 <?php
 
